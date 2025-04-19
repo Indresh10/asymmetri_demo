@@ -28,7 +28,7 @@ class MyData extends GetxController {
 
     totalItems.listen((val) {
       if (val > 30) {
-        final value = totalItems.value % 10;
+        final value = (totalItems.value / 10).floor();
         totalItems.value = value > 0 ? value : 1;
         Get.snackbar(
           'Error',
@@ -41,7 +41,7 @@ class MyData extends GetxController {
 
     itemsInLine.listen((val) {
       if (val > 15) {
-        final value = itemsInLine.value % 10;
+        final value = (itemsInLine.value / 10).floor();
         itemsInLine.value = value > 0 ? value : 1;
         Get.snackbar(
           'Error',
