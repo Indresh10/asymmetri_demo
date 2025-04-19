@@ -54,11 +54,11 @@ class AnimationControllerManager extends GetxController
   Duration _durationForSpeed(String speed) {
     switch (speed) {
       case "Fast":
-        return Duration(milliseconds: 200);
-      case "Smooth":
-        return Duration(milliseconds: 500);
-      default:
         return Duration(milliseconds: 1000);
+      case "Smooth":
+        return Duration(milliseconds: 2000);
+      default:
+        return Duration(milliseconds: 3000);
     }
   }
 
